@@ -14,4 +14,9 @@ for(const url of urls){const local=new URL(url).pathname.replace('/bayt-murattab
 check(!fs.readFileSync('style.css','utf8').includes('@import'),'no font request');
 check(fs.readFileSync('product/drawer/index.html','utf8').includes('href="https://amzn.to/4eG4oAD"'),'approved SiteStripe');
 check(!fs.readFileSync('404.html','utf8').includes('href="#/'),'404 navigation works without script');
+const basket=fs.readFileSync('product/baskets/index.html','utf8');
+check(!basket.includes('30 لتر'),'unconfirmed capacity removed from rendered product');
+const spices=fs.readFileSync('product/spices/index.html','utf8');
+check(!spices.includes('22025')&&!spices.includes('8 قطع')&&!spices.includes('ثماني'),'unconfirmed spice version and count removed');
+check(!fs.readFileSync('product/bath/index.html','utf8').includes('التثبيت اللاصق يعتمد'),'no assumed installation method');
 console.log('Passed '+count+' static checks. No browser/layout assertions were performed.');
