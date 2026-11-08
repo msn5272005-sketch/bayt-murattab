@@ -23,9 +23,10 @@ window.PRODUCTS = [
     "limit": "قد لا تناسب الأدراج الضيقة أو المنخفضة؛ التوسع وحده لا يضمن ملاءمة العمق.",
     "sourceUrl": "https://deals.nabd.com/sa/products/321467-decf03/",
     "sourceLabel": "نبض ديلز — قائمة المنتج",
-    "sourceNote": "تم التعرف على المنتج ورابط أمازون من مصدر ثانوي؛ تعذرت قراءة صفحة أمازون مباشرة. راجع المواصفات هناك قبل الطلب.",
-    "affiliateUrl": "https://www.amazon.sa/dp/B0B6N7CR8C?tag=baytmurattab-21",
-    "checkedAt": "2026-11-08"
+    "sourceNote": "تأكد تطابق المنتج من صفحة أمازون التي عرضها صاحب الموقع، وتم توسيع رابط SiteStripe الرسمي والتحقق من ASIN ومعرّف الشريك. راجع المواصفات النهائية لدى أمازون.",
+    "affiliateUrl": "https://www.amazon.sa/dp/B0B6N7CR8C?th=1&linkCode=sl2&tag=baytmurattab-21&linkId=6e78afc46a247e71117fc8bfabcb08b3&ref_=as_li_ss_tl",
+    "checkedAt": "2026-11-08",
+    "officialShortUrl": "https://amzn.to/4eG4oAD"
   },
   {
     "id": "spices",
