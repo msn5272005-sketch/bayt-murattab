@@ -13,4 +13,5 @@ for(const url of urls){const local=new URL(url).pathname.replace('/bayt-murattab
 }
 check(!fs.readFileSync('style.css','utf8').includes('@import'),'no font request');
 check(fs.readFileSync('product/drawer/index.html','utf8').includes('href="https://amzn.to/4eG4oAD"'),'approved SiteStripe');
+check(!fs.readFileSync('404.html','utf8').includes('href="#/'),'404 navigation works without script');
 console.log('Passed '+count+' static checks. No browser/layout assertions were performed.');

@@ -20,5 +20,11 @@ for(const p of context.PRODUCTS){check(/^[A-Z0-9]{10}$/.test(p.asin),'ASIN '+p.i
 location.hash='#/products';run('route()');element('query').value='B0B6N7CR8C';element('query').oninput();check(element('results').innerHTML.match(/class="card"/g).length===1,'search by ASIN');
 check(!html.includes('لا توجد روابط عمولة'),'no stale listing disclosure');
 location.hash='#/disclosure';run('route()');check(html.includes('نكسب من المشتريات المؤهلة'),'Amazon disclosure');
+location.hash='#/products?sort=name';run('route()');check(element('sort').value==='name','restore shared sort');
+element('query').value='لايفويت توابل';element('query').oninput();check(element('results').innerHTML.match(/class="card"/g).length===1,'multiple search words');
+element('query').value='<img src=x onerror=alert(1)>';element('query').oninput();check(element('results').innerHTML.includes('لم نعثر'),'HTML query treated as text');
+location.hash='#/guide';run('route()');check(html.includes('دليل اختيار أدوات التنظيم'),'buying guide');
+context.document.body={dataset:{route:'/product/drawer'}};location.hash='';run('route()');check(html.includes('https://amzn.to/4eG4oAD'),'static route without fragment');
+location.hash='#/';run('route()');check(html.includes('href="/bayt-murattab/products/"'),'static navigation URL');
 console.log(`Passed ${checks} checks. Browser layout and assistive technology require manual verification.`);
 
